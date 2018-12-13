@@ -88,3 +88,6 @@ Finished: SUCCESS
 You should now 3 running services. 
 ![stack](/img/stack.jpg?raw=true "stack")
 
+For each service, you shold find corresponding volume and loaction
+![volume](/img/volume.jpg?raw=true "volume")
+
