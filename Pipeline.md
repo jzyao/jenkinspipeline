@@ -86,5 +86,5 @@ Finished: SUCCESS
 
 ### Check Stack from UCP
 You should now 3 running services. 
-![stack](/jenkins/images/stack.jpg?raw=true "stack")
+![stack](/img/stack.jpg?raw=true "stack")
 
