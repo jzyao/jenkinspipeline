@@ -1,6 +1,8 @@
 # Jenkins Pipeline Guide for Docker EE 
 
+## Create Jenkins user in UCP and download Client bundle
 
+!user()
 
 ## Build your images and push them to DTR (Distributed Trusted Registry)
 
@@ -11,8 +13,12 @@ For this environment we build our own Jenkins Master
 
 This can step can be done within the UCP UI or by sourcing the Client bundle and using the Docker Client.
 
+![jenkinsuser](/img/jenkinsuser.jpg?raw=true "jenkinsuser" =200x)
+
+![clientbundle](/img/clientbundle.jpg?raw=true "clientbundle" =200x)
+
 ```
-$ unzip ucp-bundle-admin.zip
+$ unzip ucp-bundle-jenkins.zip
 $ source env.sh
 
 $ cd jenkins-master
