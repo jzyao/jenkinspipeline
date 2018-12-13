@@ -6,7 +6,7 @@ services:
     volumes:
       - type: volume
         source: mydata1
-        target: /data
+        target: /temp
     deploy:
       placement:
         constraints:
@@ -16,7 +16,7 @@ services:
     volumes:
       - type: volume
         source: mydata2
-        target: /data
+        target: /temp
     deploy:
       placement:
         constraints:
@@ -26,7 +26,7 @@ services:
     volumes:
       - type: volume
         source: mydata2
-        target: /data
+        target: /temp
     deploy:
       placement:
         constraints:
