@@ -1,7 +1,5 @@
 # Background
 
-##
-
 Customer will compile same source code with 16 different profiles. The source code is around 200-400Gb, so it will take a very long time to pull code and then compile in the container.
 
 Also, source code can't be shared with different compiling process, since it will generate some tmp file during process.
@@ -26,9 +24,9 @@ done
 
 Second, lable each node, in my case, `jenkinsworker:1`, which will be used in docker compose file to pin service to dedicate node.
 
-Third, depoly docker stack to kick off 16 services to run 16 compiling jobs.
+Third, depoly docker stack to kick off 16 services to run 16 compiling jobs in one time.
 
-Compose file for four containers in two node 
+Compose file example for four containers in two node 
 
 ```
 version: '3.3'
