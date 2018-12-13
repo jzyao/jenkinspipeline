@@ -22,7 +22,7 @@ $ unzip ucp-bundle-jenkins.zip
 $ source env.sh
 
 $ cd jenkins-master
-$ docker stack deploy -c docker-compose.yml ci
+$ docker stack deploy -c docker-compose-jenkins-master.yml jenkins
 ```
 
 ## Configure Jenkins
