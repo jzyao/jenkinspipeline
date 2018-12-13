@@ -2,33 +2,33 @@
 
 ## demo 
 
-### Create a new Freestyle project
+### Create a new Pipeline project
 
-Lock this project to Jenkins slave worker node
-
-![free](/jenkins/images/free.jpg?raw=true "lock")
-
-
-### Add build step --> Execute shell. 
-
-Please replace the <DTR_URL>, <PASSWORD> with your own
-
+Prepare an environment for the run
 
 ```
-DTR_USERNAME=admin
-DTR_URL=<DTR_URL>
-TAG=1
-
-git clone https://github.com/jzyao/CIrepo.git
-
-cd CIrepo
-
-docker build -t $DTR_URL/admin/citest:$TAG .
-
-docker login -u admin -p <PASSWORD> $DTR_URL
-
-docker push $DTR_URL/admin/citest:$TAG
+DOCKER_UCP_CREDENTIALS_ID=ucp-jenkins
+DOCKER_UCP_URI=tcp://172.28.128.3:443
+DOCKER_SERVICE_NAME=pipe
 ```
+* Please check DOCKER_UCP_URI in Client Bundle -> env.sh
+
+### Add Pipeline script 
+
+```
+node {
+    stage('Clone') {
+   git 'https://github.com/jzyao/jenkinspipeline'
+    }
+
+    stage('Deploy') {
+         withDockerServer([credentialsId: env.DOCKER_UCP_CREDENTIALS_ID, uri: env.DOCKER_UCP_URI]) {
+            sh "docker stack deploy -c docker-compose-pipeline-jobs.yaml ${env.DOCKER_SERVICE_NAME}"
+        }
+      }
+    }
+```
+
 
 ### Run the build
 
