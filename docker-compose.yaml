@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+  build:
+    image: hello-world:latest
+    deploy:
+      placement:
+        constraints:
+          - node.labels.jenkinsworker == 1
