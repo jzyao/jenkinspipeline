@@ -2,9 +2,9 @@
 
 ## Create Jenkins user in UCP and download Client bundle
 
-![jenkinsuser](/img/jenkinsuser.jpg?raw=true "jenkinsuser" )
+![jenkinsuser](./img/jenkinsuser.jpg?raw=true "jenkinsuser" )
 
-![clientbundle](/img/clientbundle.jpg?raw=true "clientbundle")
+![clientbundle](./img/clientbundle.jpg?raw=true "clientbundle")
 
 ## Build your images and push them to DTR (Distributed Trusted Registry)
 
