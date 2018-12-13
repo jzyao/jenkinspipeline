@@ -36,6 +36,7 @@ Login to the Jenkins appliancing with this password, installing all of the defau
 ## Jenkins Plug-Ins Required
 
 - Docker Plugin 
+- Environment Injector Plugin
 - Git Plugin
 - Github API plugin
 - GitHub Authentication plugin - Required to use Access Tokens
