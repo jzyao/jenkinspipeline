@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:
+  jenkins:
+    image: jzyao/jenkins-master:1119
+    deploy:
+      mode: replicated
+      replicas: 1
+    networks:
+        - jenkins
+    ports:
+        - 30000:8080
+        - 50000:50000
+    volumes:
+        - jenkins:/var/jenkins_home
+volumes:
+  jenkins:
+
+networks:
+  jenkins:
+    external: true
