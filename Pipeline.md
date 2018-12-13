@@ -11,7 +11,7 @@ DOCKER_UCP_CREDENTIALS_ID=ucp-jenkins
 DOCKER_UCP_URI=tcp://172.28.128.3:443
 DOCKER_SERVICE_NAME=pipe
 ```
-* Please check DOCKER_UCP_URI in Client Bundle -> env.sh
+* you can find DOCKER_UCP_URI in Client Bundle -> env.sh
 
 ![pipeconfig](/img/pipeconfig.jpg?raw=true "pipeconfig" )
 
