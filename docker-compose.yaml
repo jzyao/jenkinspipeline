@@ -1,9 +1,36 @@
 version: '3.3'
 
 services:
-  build:
-    image: hello-world:latest
+  build1:
+    image: tomcat:7-jre8-alpine
+    volumes:
+      - type: volume
+        source: mydata1
+        target: /data
     deploy:
       placement:
         constraints:
           - node.labels.jenkinsworker == 1
+  build2:
+    image: tomcat:7-jre8-alpine
+    volumes:
+      - type: volume
+        source: mydata2
+        target: /data
+    deploy:
+      placement:
+        constraints:
+          - node.labels.jenkinsworker == 2
+  build3:
+    image: tomcat:7-jre8-alpine
+    volumes:
+      - type: volume
+        source: mydata2
+        target: /data
+    deploy:
+      placement:
+        constraints:
+          - node.labels.jenkinsworker == 1
+volumes:
+  mydata1:
+  mydata2:
