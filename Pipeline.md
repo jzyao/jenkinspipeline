@@ -31,7 +31,7 @@ node {
     }
 ```
 
-![pipeline](/img/pipeline.jpg?raw=true "pipeline" )
+![pipeline](./img/pipeline.jpg?raw=true "pipeline" )
 
 ### Run the build
 
@@ -86,8 +86,8 @@ Finished: SUCCESS
 
 ### Check Stack from UCP
 You should now 3 running services. 
-![stack](/img/stack.jpg?raw=true "stack")
+![stack](./img/stack.jpg?raw=true "stack")
 
 For each service, you shold find corresponding volume and loaction
-![volume](/img/volume.jpg?raw=true "volume")
+![volume](./img/volume.jpg?raw=true "volume")
 
