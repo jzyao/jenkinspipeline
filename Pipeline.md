@@ -13,7 +13,7 @@ DOCKER_SERVICE_NAME=pipe
 ```
 * you can find DOCKER_UCP_URI in Client Bundle -> env.sh
 
-![pipeconfig](/img/pipeconfig.jpg?raw=true "pipeconfig" )
+![pipeconfig](./img/pipeconfig.jpg?raw=true "pipeconfig" )
 
 ### Add Pipeline script 
 
